@@ -1,12 +1,14 @@
 "use client";
 import { api } from "../../convex/_generated/api";
-import * as React from 'react';
 import { useForm } from "react-hook-form";
 import { useMutation, useQuery } from "convex/react";
 import  { useRef } from 'react'
 import { ReactSketchCanvas, ReactSketchCanvasRef } from 'react-sketch-canvas';
-import { Button } from "@/components/button";
-import { Label } from "@/components/label";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import Image from "next/image";
+import eraser from '../../public/eraser_white.png'
 
 export default function Home() {
   const saveSketchMutation = useMutation(api.sketches.saveSketch);
@@ -38,9 +40,7 @@ const sortedSketches = (sketchesQuery ?? []).sort((a, b) => {
         })}
         >
       <Label htmlFor="prompt">Prompt (Descrição detalhada)</Label>
-      <input id="prompt"
-        className="text-black"
-      {...register("prompt", { required: true })} />
+      <Input id="prompt" {...register("prompt", { required: true })} />
       {errors.prompt && <span>Este campo é obrigatório!</span>}
 
      <Label className="mt-4">Canvas (Desenhe algo abaixo)</Label>
@@ -52,22 +52,25 @@ const sortedSketches = (sketchesQuery ?? []).sort((a, b) => {
     />
 
     <Button
-    className="bg-orange-500 rounded"
     type="button"
     variant={"ghost"}
     onClick={() => {
       canvasRef.current?.clearCanvas();
     }}
     >
-      Apagar
+      <Image 
+      src={eraser} 
+      alt=""
+      height={24}
+      />
     </Button>
 
 
-      <Button className="bg-purple-600 rounded" type="submit">Enviar</Button>
+      <Button type="submit">Enviar</Button>
     </form>
 
  <section>
-   <h2>Esboços recentes</h2>
+   <h2 className="mb-2">Esboços recentes</h2>
     <div className="grid grid-cols-4 gap-4">
             {sortedSketches.map((sketch) => (
               <img
