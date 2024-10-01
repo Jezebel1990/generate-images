@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MagicAI
 
-## Getting Started
+![Captura de tela 2024-10-01 201637](https://github.com/user-attachments/assets/13a2adaa-403a-449d-8a1d-fe93030fe8d4)
+![Captura de tela 2024-10-01 201659](https://github.com/user-attachments/assets/d228ced9-a26b-4b09-a4fd-64a0e11a0726)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> Este é um projeto de página web onde você pode criar desenhos no canvas, e eles são replicados automaticamente ao lado em forma de imagem gerada por Inteligência Artificial. A aplicação utiliza **Convex** e **Replicate** para transformar esboços desenhados à mão em imagens digitais criadas por IA, com uma interface estilizada utilizando **shadcn/ui**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Convex](https://www.convex.dev/): Gerenciamento de back-end em tempo real para processar e armazenar os esboços.
+- [Replicate](https://replicate.com/home): Serviço de IA para transformar os esboços em imagens.
+- [Next.js](https://nextjs.org/): Framework React para a construção da interface do usuário.
+- [Tailwind CSS](https://tailwindcss.com/): Framework de CSS para o design responsivo e estilização da interface.
+- [Shadcn/ui](https://ui.shadcn.com/): Componentes de UI acessíveis e reutilizáveis para a interface.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Funcionalidades
 
-## Learn More
+- Desenhe no canvas na página web.
+- Os esboços são replicados automaticamente em uma imagem gerada por IA ao lado.
+- A comunicação entre o front-end e o back-end é feita utilizando **Convex**.
+- A transformação dos esboços em imagens é realizada utilizando **Replicate**.
+- Interface estilizada com **shadcn/ui** para proporcionar uma experiência visual moderna e intuitiva.
 
-To learn more about Next.js, take a look at the following resources:
+## Como Rodar o Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/Jezebel1990/generate-images.git
+   cd generate-images
+   ```
+2. Instale as dependências:
+  ```bash
+    npm install
+   ```
+3. Execute o projeto em desenvolvimento:
+  ```bash
+    npm run dev
+   ```
+4. Abra o navegador em http://localhost:3000 para ver a aplicação.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estrutura do Projeto
+| Estrutura | Descrição |
+| --- | --- |
+| `/src` | Contém o código-fonte do projeto, incluindo os componentes React e as funções Convex. |
+| `/convex` | Contém as funções relacionadas à comunicação com o back-end Convex. |
+| `/public` | Arquivos estáticos como imagens e ícones. |
+| `/shadcn/ui` | Componentes personalizados para a interface do usuário. |
 
-## Deploy on Vercel
+## Licença
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feito com ♥ por [Jezebel Guedes](https://www.linkedin.com/in/jezebel-guedes/) 👋 Entre em contato!
