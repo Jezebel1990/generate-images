@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import eraser from '../../public/eraser_white.png'
+
 
 export default function Home() {
   const saveSketchMutation = useMutation(api.sketches.saveSketch);
@@ -59,9 +59,10 @@ const sortedSketches = (sketchesQuery ?? []).sort((a, b) => {
     }}
     >
       <Image 
-      src={eraser} 
-      alt=""
+      src="/eraser_white.png" 
+      alt="Eraser"
       height={24}
+      width={24}
       />
     </Button>
 
