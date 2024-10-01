@@ -1,7 +1,7 @@
 # MagicAI
 
-![Captura de tela 2024-10-01 201637](https://github.com/user-attachments/assets/13a2adaa-403a-449d-8a1d-fe93030fe8d4)
-![Captura de tela 2024-10-01 201659](https://github.com/user-attachments/assets/d228ced9-a26b-4b09-a4fd-64a0e11a0726)
+![Captura de tela 2024-10-01 201637](https://github.com/user-attachments/assets/4b8346c3-8ced-4c7d-9581-7d03cec636e4)
+![Captura de tela 2024-10-01 201659](https://github.com/user-attachments/assets/a8df6119-ee81-45ca-bc39-a32057d0bd94)
 
 
 > Este é um projeto de página web onde você pode criar desenhos no canvas, e eles são replicados automaticamente ao lado em forma de imagem gerada por Inteligência Artificial. A aplicação utiliza **Convex** e **Replicate** para transformar esboços desenhados à mão em imagens digitais criadas por IA, com uma interface estilizada utilizando **shadcn/ui**.
